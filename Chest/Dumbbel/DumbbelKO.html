@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS -->
+<link rel="stylesheet" href="./styles.css">
+<a name="top"></a>
+<title>Dumbbel Chest Exercise</title>
+<script src="/PhysicalSite/lib/jquery-1.9.1.min.js"
+	type="text/javascript" charset="utf-8"></script>
+<style>
+#menus:hover {
+	box-shadow: 0 8px 16px 0 white;
+	opacity: 0.7;
+}
+</style>
+</head>
+<body id="body-pd" style="background-color: black;">
+	<div class="l-navbar" id="navbar">
+		<nav class="nav">
+			<div>
+				<div class="nav__brand">
+					<ion-icon name="body-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+					<a href="#" class="nav__logo">Chest Exercise</a>
+				</div>
+				<div class="nav__list">
+					<a href="../Babel/BabelKo.html" class="nav__link"> <ion-icon
+							name="remove-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Babel</span>
+					</a> <a href="../Dumbbel/DumbbelKO.html" class="nav__link active"> <ion-icon
+							name="reorder-two-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Dumbbel</span>
+					</a> <a href="../ChestPress/ChestPressKO.html" class="nav__link"> <ion-icon
+							name="reorder-three-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Chest Machine</span>
+					</a><a href="../BodyWeight/BodyWeightKO.html" class="nav__link"> <ion-icon
+							name="reorder-four-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Body Weight</span>
+					</a>
+					<div class="nav__link collapse" onclick="moveETC()">
+						<ion-icon name="folder-outline" class="nav__icon"></ion-icon>
+						<span class="nav_name">Etc</span>
+
+						<ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+						<ul class="collapse__menu">
+							<!-- <a href="./Etc.html" class="collapse__sublink">Place</a> -->
+							<a href="../../Etc/Etc.html" class="collapse__sublink">Shop</a>
+							<a href="../../Etc/Etc.html" class="collapse__sublink">Food</a>
+						</ul>
+					</div>
+					<a href="#top" class="nav__link"> <ion-icon
+							name="arrow-up-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Page Up</span>
+					</a> <a href="../../indexKO.html" class="nav__link"> <ion-icon
+							name="home-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Main</span>
+					</a>
+
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- 버튼 -->
+
+	<ion-icon name="walk-outline" class="exe_seq"></ion-icon>
+	<span style="font-size: 30px; color: white; margin-right: 1000px;">덤벨
+		가슴 운동</span>
+	<a href="Dumbbel.html" style="color: white;" class="exe_seq" id="menus">english</href>
+		<!-- 페이지 버튼 -->
+		<div id="menuClick">
+			<hr>
+			<a href="#DP" class="button" id="menus"> <ion-icon
+					name="arrow-down-outline" class="exe_seq"></ion-icon> <span
+				class="nav_name" style="font-size: 20px; margin-right: 90px;">덤벨
+					프레스</span>
+			</a> <a href="#DPO" class="button" id="menus"> <ion-icon
+					name="arrow-down-outline" class="exe_seq"></ion-icon> <span
+				class="nav_name" style="font-size: 20px; margin-right: 90px;">덤벨
+					풀 오버</span>
+			</a> <a href="#DF" class="button" id="menus"> <ion-icon
+					name="arrow-down-outline" class="exe_seq"></ion-icon> <span
+				class="nav_name" style="font-size: 20px;">덤벨 플라이</span>
+			</a>
+		</div> <!-- 동영상 -->
+		<div>
+			<a name="DP"></a>
+			<hr>
+			<ion-icon name="caret-forward-outline" class="exe_seq"></ion-icon>
+			<span style="font-size: 30px; color: white;">덤벨 프레스</span> <br />
+			<div>
+				<iframe width="560" height="315"
+					src="https://www.youtube.com/embed/xTQL6jvVMNA?autoplay=1&start=364&mute=1&controls=0"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+				<br />
+				<ion-icon name="remove-outline" class="exe_seq"> </ion-icon>
+				<span>덤벨을 쥐고 허리를 아치형으로 만들어 누워 양 다리는 바닥에 단단히 고정합니다.</span> <br />
+				<ion-icon name="reorder-two-outline" class="exe_seq"> </ion-icon>
+				<span>덤벨은 가슴중앙-겨드랑이 사이에 위치하하고 팔꿉치를 살짝굽히며 어깨너비 간격으로 팔을 벌려줍니다</span> <br />
+				<ion-icon name="reorder-three-outline" class="exe_seq"> </ion-icon>
+				<span>시선을 덤벨로 고정시켜 천천히 올려주는데 덤벨을 들어올릴 때 내릴 때보다 빠르게 시행합니다</span> <br />
+				<ion-icon name="reorder-four-outline" class="exe_seq"> </ion-icon>
+				<span>천천히 가슴근육의 이완을 최대로 만들며 가슴과 팔이 평행해질 때까지 내려줍니다.</span> <br />
+			</div>
+		</div>
+		<div>
+			<a name="DPO"></a>
+			<div style='margin: 100px 0 100px 0;'></div>
+			<hr>
+			<ion-icon name="caret-forward-outline" class="exe_seq"></ion-icon>
+			<span style="font-size: 30px; color: white;">덤벨 풀 오버</span> <br />
+			<iframe width="560" height="315"
+				src="https://www.youtube.com/embed/-SNHJ3RjoJs?autoplay=1&start=4&mute=1&controls=0"
+				title="YouTube video player" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+			<br />
+			<ion-icon name="remove-outline" class="exe_seq"> </ion-icon>
+			<span>허리를 아치형으로 만들어 벤치에 누워줍니다.</span> <br />
+			<ion-icon name="reorder-two-outline" class="exe_seq"> </ion-icon>
+			<span>덤벨을 가슴과 수직방향이 되도록 위로 올려줍니다</span> <br />
+			<ion-icon name="reorder-three-outline" class="exe_seq"> </ion-icon>
+			<span>팔굼치는 약간 구부린 상태로 팔을 머리 위 귀점까지 천천히 내려줍니다.</span> <br />
+			<ion-icon name="reorder-four-outline" class="exe_seq"> </ion-icon>
+			<span>가슴근육과 등의 자극이 갈 수있도록 천천히 포물선을 그리며 제자리도 돌아와 반복합니다</span> <br />
+		</div>
+		<div>
+			<a name="DF"></a>
+			<div style='margin: 100px 0 100px 0;'></div>
+			<hr>
+			<ion-icon name="caret-forward-outline" class="exe_seq"></ion-icon>
+			<span style="font-size: 30px; color: white;">덤벨 플라이</span> <br />
+			<iframe width="560" height="315"
+				src="https://www.youtube.com/embed/HcDzxNNrSBo?autoplay=1&start=55&mute=1&controls=0"
+				title="YouTube video player" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+			<br />
+			<ion-icon name="remove-outline" class="exe_seq"> </ion-icon>
+			<span>시선은 덤벨로 고정시킨 후 가슴 위쪽으로 위치할 수 있도록 올립니다</span> <br />
+			<ion-icon name="reorder-two-outline" class="exe_seq"> </ion-icon>
+			<span>양팔은 서서히 벌려주며 덤벨이 가슴위치정도가 될 수있도록 내려줍니다.</span> <br />
+			<ion-icon name="reorder-three-outline" class="exe_seq"> </ion-icon>
+			<span>반원을 그리며 처음 자세로 되돌아옵니다.</span> <br />
+			<div style='margin: 100px 0 100px 0;'></div>
+			<hr>
+		</div> <!-- IONICONS --> <script
+			src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script> <!-- JS -->
+		<script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS -->
+<link rel="stylesheet" href="./styles.css">
+<a name="top"></a>
+<title>Chest Exercise</title>
+<script src="/PhysicalSite/lib/jquery-1.9.1.min.js"
+	type="text/javascript" charset="utf-8"></script>
+<style>
+#menus:hover {
+	box-shadow: 0 8px 16px 0 white;
+	opacity: 0.7;
+}
+</style>
+</head>
+<body id="body-pd" style="background-color: black;">
+	<div class="l-navbar" id="navbar">
+		<nav class="nav">
+			<div>
+				<div class="nav__brand">
+					<ion-icon name="body-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+					<a href="#" class="nav__logo">Chest Exercise</a>
+				</div>
+				<div class="nav__list">
+					<a href="../Babel/Babel.html" class="nav__link"> <ion-icon
+							name="remove-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Babel</span>
+					</a> <a href="../Dumbbel/Dumbbel.html" class="nav__link"> <ion-icon
+							name="reorder-two-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Dumbbel</span>
+					</a> <a href="../ChestPress/ChestPress.html" class="nav__link active">
+						<ion-icon name="reorder-three-outline" class="nav__icon"></ion-icon>
+						<span class="nav_name">Chest Machine</span>
+					</a><a href="../BodyWeight/BodyWeight.html" class="nav__link"> <ion-icon
+							name="reorder-four-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Body Weight</span>
+					</a>
+					<div class="nav__link collapse" onclick="moveETC()">
+						<ion-icon name="folder-outline" class="nav__icon"></ion-icon>
+						<span class="nav_name">Etc</span>
+
+						<ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+						<ul class="collapse__menu">
+							<!-- <a href="./Etc.html" class="collapse__sublink">Place</a> -->
+							<a href="../../Etc/Etc.html" class="collapse__sublink">Shop</a>
+							<a href="../../Etc/Etc.html" class="collapse__sublink">Food</a>
+						</ul>
+					</div>
+					<a href="#top" class="nav__link"> <ion-icon
+							name="arrow-up-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Page Up</span>
+					</a> <a href="../../index.html" class="nav__link"> <ion-icon
+							name="home-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Main</span>
+					</a>
+
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- 버튼 -->
+
+	<ion-icon name="walk-outline" class="exe_seq"></ion-icon>
+	<span style="font-size: 30px; color: white; margin-right: 900px;">Chest
+		Machine Exercise</span>
+	<a href="ChestPressKO.html" style="color: white;" class="exe_seq"
+		id="menus">한국어</href> <!-- 페이지 버튼 -->
+		<div id="menuClick">
+			<hr>
+			<a href="#CPM" class="button" id="menus"> <ion-icon
+					name="arrow-down-outline" class="exe_seq"></ion-icon> <span
+				class="nav_name" style="font-size: 20px; margin-right: 90px;">Chest
+					Press Machine</span>
+			</a> <a href="#PDFM" class="button" id="menus"> <ion-icon
+					name="arrow-down-outline" class="exe_seq"></ion-icon> <span
+				class="nav_name" style="font-size: 20px; margin-right: 90px;">Pec
+					Deck Fly Machine</span>
+			</a>
+		</div> <!-- 동영상 -->
+		<div>
+			<a name="CPM"></a>
+			<hr>
+			<ion-icon name="caret-forward-outline" class="exe_seq"></ion-icon>
+			<span style="font-size: 30px; color: white;">Chest Press
+				Machine</span> <br />
+			<div>
+				<iframe width="560" height="315"
+					src="https://www.youtube.com/embed/cZnN10iJJJU?autoplay=1&start=316&mute=1&controls=0"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+				<br />
+				<ion-icon name="remove-outline" class="exe_seq"> </ion-icon>
+				<span>Place your hips and upper back on a bench and open your
+					chest as much as possible.</span> <br />
+				<ion-icon name="reorder-two-outline" class="exe_seq"> </ion-icon>
+				<span>Tighten your chest and push forward.</span> <br />
+				<ion-icon name="reorder-three-outline" class="exe_seq"> </ion-icon>
+				<span>While keeping your wrists and elbows in a straight
+					line, slowly pull your elbows back.</span> <br />
+			</div>
+		</div>
+		<div>
+			<a name="PDFM"></a>
+			<div style='margin: 100px 0 100px 0;'></div>
+			<hr>
+			<ion-icon name="caret-forward-outline" class="exe_seq"></ion-icon>
+			<span style="font-size: 30px; color: white;">Pec Deck Fly
+				Machine</span> <br />
+			<div>
+				<iframe width="560" height="315"
+					src="https://www.youtube.com/embed/u56jywgbvE4?autoplay=1&start=211&mute=1&controls=0"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+				<br />
+				<ion-icon name="remove-outline" class="exe_seq"> </ion-icon>
+				<span>After adjusting the chair height of the machine so that
+					the arms and elbows are in the center of the chest, adjust the
+					machine arm angle so that it is in line with your shoulders without
+					tilting the machine arm too far back.</span> <br />
+				<ion-icon name="reorder-two-outline" class="exe_seq"> </ion-icon>
+				<span>When sitting on a chair, attach the upper back and
+					buttocks to the chair and make the waist slightly arched with the
+					rib cage widened so that the chest is relaxed.</span> <br />
+				<ion-icon name="reorder-three-outline" class="exe_seq"> </ion-icon>
+				<span>After holding it well so that your posture is not
+					disturbed, bring your arms to the inside of your chest.</span> <br />
+			</div>
+			<div style='margin: 100px 0 100px 0;'></div>
+			<hr>
+		</div> <!-- IONICONS --> <script
+			src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script> <!-- JS -->
+		<script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript"
+	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=75dbb207d5f048449c25549a70be082a"></script>
+<a name="Place"></a>
+<!-- CSS -->
+<link rel="stylesheet" href="./styles.css">
+<a name="top"></a>
+<title>Babel Chest Exercise</title>
+<script src="../lib/jquery-1.9.1.min.js"
+	type="text/javascript" charset="utf-8"></script>
+<style>
+.card {
+	box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.2);
+	transition: 0.3s;
+	width: 40%;
+	border: 2px solid white;
+	text-align: center;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 white;
+	opacity: 0.7;
+}
+
+.container {
+	padding: 2px 16px;
+}
+
+#menus:hover {
+	box-shadow: 0 8px 16px 0 white;
+	opacity: 0.7;
+}
+.etc-line{
+      opacity:0; 
+      padding-top: 50px;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(window).scroll( function(){   
+            $('.etc-line').each( function(i){ 
+                var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                
+                if( bottom_of_window > bottom_of_element ){
+                    $(this).animate({'opacity':'1'},700);
+                }  
+            }); 
+        });
+    });
+</script>
+</head>
+<body id="body-pd" style="background-color: black;">
+	<div class="l-navbar" id="navbar">
+		<nav class="nav">
+			<div>
+				<div class="nav__brand">
+					<ion-icon name="body-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+					<a href="#" class="nav__logo">Chest Exercise</a>
+				</div>
+				<div class="nav__list">
+					<a href="../Chest/Babel/Babel.html" class="nav__link"> <ion-icon
+							name="remove-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Babel</span>
+					</a> <a href="../Chest/Dumbbel/Dumbbel.html" class="nav__link"> <ion-icon
+							name="reorder-two-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Dumbbel</span>
+					</a> <a href="../Chest/ChestPress/ChestPress.html" class="nav__link">
+						<ion-icon name="reorder-three-outline" class="nav__icon"></ion-icon>
+						<span class="nav_name">Chest Machine</span>
+					</a><a href="../Chest/BodyWeight/BodyWeight.html" class="nav__link">
+						<ion-icon name="reorder-four-outline" class="nav__icon"></ion-icon>
+						<span class="nav_name">Body Weight</span>
+					</a>
+					<div class="nav__link collapse active" onclick="moveETC()">
+						<ion-icon name="folder-outline" class="nav__icon"></ion-icon>
+						<span class="nav_name">Etc</span>
+
+						<ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+						<ul class="collapse__menu">
+							<!-- <a href="./Etc.html" class="collapse__sublink">Place</a> -->
+							<a href="./Etc.html" class="collapse__sublink">Shop</a>
+							<a href="./Etc.html" class="collapse__sublink">Food</a>
+						</ul>
+					</div>
+					<a href="#top" class="nav__link"> <ion-icon
+							name="arrow-up-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Page Up</span>
+					</a> <a href="../index.html" class="nav__link"> <ion-icon
+							name="home-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Main</span>
+					</a>
+
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- 버튼 -->
+
+	<ion-icon name="walk-outline" class="exe_seq"></ion-icon>
+	<span style="font-size: 30px; color: white;">Etc</span>
+	<hr>
+	<!-- 페이지 버튼 -->
+	<div id="menuClick">
+		<!-- <a href="#Place" class="button" id="menus"> <ion-icon
+				name="arrow-down-outline" class="exe_seq"></ion-icon> <span
+			class="nav_name" style="font-size: 20px; margin-right: 90px;">Place</span>
+		</a> -->
+		 <a href="#Shop" class="button" id="menus"> <ion-icon
+				name="arrow-down-outline" class="exe_seq"></ion-icon> <span
+			class="nav_name" style="font-size: 20px; margin-right: 90px;">Shop</span>
+		</a> <a href="#Food" class="button" id="menus"> <ion-icon
+				name="arrow-down-outline" class="exe_seq"></ion-icon> <span
+			class="nav_name" style="font-size: 20px;">Food</span>
+		</a>
+	</div>
+	<hr>
+	<!-- 장소 -->
+	<!-- 
+	<div class="etc-line">
+		<span style="font-size: 30px; color: white;">near Place</span> <br />
+		<div id="map" style="width: 500px; height: 400px;"></div>
+		<script type="text/javascript">
+			var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+			var options = { //지도를 생성할 때 필요한 기본 옵션
+				center : new kakao.maps.LatLng(37.49801302809576,
+						127.02934824056041), //지도의 중심좌표.
+				level : 3
+			//지도의 레벨(확대, 축소 정도)
+			};
+
+			var map = new kakao.maps.Map(container, options);
+			var markerPosition = new kakao.maps.LatLng(37.49801302809576,
+					127.02934824056041);
+
+			// 마커를 생성합니다
+			var marker = new kakao.maps.Marker({
+				position : markerPosition
+			});
+
+			// 마커가 지도 위에 표시되도록 설정합니다
+			marker.setMap(map);
+		</script>
+		<div style='margin: 100px 0 100px 0;'></div>
+	</div>
+	<hr> -->
+	<!-- 장비 구매 -->
+	<div>
+		<a name="Shop"></a> <span style="font-size: 30px; color: white;">Shop</span>
+		<br />
+		<div style="display: flex;">
+			<div style='margin: 80px 80px 80px 80px'></div>
+			<div class="card">
+				<a href="http://spobank.co.kr/sub/sub03_01.php?cat_no=9"
+					target="_blank" class="btm_image"> <img
+					src="../images/etc/spobank.png" alt="Avatar"
+					style="height: 200px; width: 200px;">
+					<div class="container">
+						<h4>
+							<b style="color: white;">SPOBANK</b>
+						</h4>
+					</div>
+				</a>
+			</div>
+			<div style='margin: 80px 80px 80px 80px'></div>
+			<div class="card">
+				<a href="http://draxfit.com/" target="_blank" class="btm_image">
+					<img src="../images/etc/DRAX-removebg-preview.png" alt="Avatar"
+					style="height: 200px; width: 200px;">
+					<div class="container">
+						<h4>
+							<b style="color: white;">DRAX</b>
+						</h4>
+					</div>
+				</a>
+			</div>
+			<div style='margin: 80px 80px 80px 80px'></div>
+			<div class="card">
+				<a href="https://www.lifefitness.com/en-us" target="_blank"
+					class="btm_image"> <img
+					src="../images/etc/lifefitness-removebg-preview.png" alt="Avatar"
+					style="height: 200px; width: 200px;">
+					<div class="container">
+						<h4>
+							<b style="color: white;">LifeFitness</b>
+						</h4>
+					</div>
+				</a>
+			</div>
+			<div style='margin: 80px 80px 80px 80px'></div>
+		</div>
+	</div>
+	<div style='margin: 50px 0 50px 0;'></div>
+	<hr>
+	<!-- 음식 구매 -->
+	<div class="etc-line">
+		<a name="Food"></a> <span style="font-size: 30px; color: white;">Food</span>
+		<br />
+		<div style="display: flex;">
+			<div style='margin: 80px 80px 80px 80px'></div>
+			<div class="card">
+				<a href="https://barudak.co.kr/" target="_blank" class="btm_image">
+					<img src="../images/etc/바르닭-removebg-preview.png" alt="Avatar"
+					style="height: 200px; width: 200px;">
+					<div class="container">
+						<h4>
+							<b style="color: white;">barudak</b>
+						</h4>
+					</div>
+				</a>
+			</div>
+			<div style='margin: 80px 80px 80px 80px'></div>
+			<div class="card">
+				<a href="http://www.calobye.com/main_html.php" target="_blank"
+					class="btm_image"> <img
+					src="../images/etc/칼로바이-removebg-preview.png" alt="Avatar"
+					style="height: 200px; width: 200px;">
+					<div class="container">
+						<h4>
+							<b style="color: white;">calobye</b>
+						</h4>
+					</div>
+				</a>
+			</div>
+			<div style='margin: 80px 80px 80px 80px'></div>
+			<div class="card">
+				<a href="https://www.herbalife.co.kr/" target="_blank"
+					class="btm_image"> <img
+					src="../images/etc/허벌라이프-removebg-preview.png" alt="Avatar"
+					style="height: 200px; width: 200px;">
+					<div class="container">
+						<h4>
+							<b style="color: white;">LifeFitness</b>
+						</h4>
+					</div>
+				</a>
+			</div>
+			<div style='margin: 80px 80px 80px 80px'></div>
+		</div>
+		<div style='margin: 100px 0 100px 0;'></div>
+	</div>
+	<hr>
+	<!-- IONICONS -->
+	<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+	<!-- JS -->
+	<script src="./main.js"></script>
+</body>
+</html>

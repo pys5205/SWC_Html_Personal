@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS -->
+<link rel="stylesheet" href="./styles.css">
+<a name="top"></a>
+<title>Chest Exercise</title>
+<script src="/PhysicalSite/lib/jquery-1.9.1.min.js"
+	type="text/javascript" charset="utf-8"></script>
+<style>
+#menus:hover {
+	box-shadow: 0 8px 16px 0 white;
+	opacity: 0.7;
+}
+</style>
+</head>
+<body id="body-pd" style="background-color: black;">
+	<div class="l-navbar" id="navbar">
+		<nav class="nav">
+			<div>
+				<div class="nav__brand">
+					<ion-icon name="body-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+					<a href="#" class="nav__logo">Chest Exercise</a>
+				</div>
+				<div class="nav__list">
+					<a href="../Babel/Babel.html" class="nav__link"> <ion-icon
+							name="remove-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Babel</span>
+					</a> <a href="../Dumbbel/Dumbbel.html" class="nav__link"> <ion-icon
+							name="reorder-two-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Dumbbel</span>
+					</a> <a href="../ChestPress/ChestPress.html" class="nav__link"> <ion-icon
+							name="reorder-three-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Chest Machine</span>
+					</a><a href="../BodyWeight/BodyWeight.html" class="nav__link active">
+						<ion-icon name="reorder-four-outline" class="nav__icon"></ion-icon>
+						<span class="nav_name">Body Weight</span>
+					</a>
+					<div class="nav__link collapse" onclick="moveETC()">
+						<ion-icon name="folder-outline" class="nav__icon"></ion-icon>
+						<span class="nav_name">Etc</span>
+
+						<ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+						<ul class="collapse__menu">
+							<!-- <a href="./Etc.html" class="collapse__sublink">Place</a> -->
+							<a href="../../Etc/Etc.html" class="collapse__sublink">Shop</a>
+							<a href="../../Etc/Etc.html" class="collapse__sublink">Food</a>
+						</ul>
+					</div>
+					<a href="#top" class="nav__link"> <ion-icon
+							name="arrow-up-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Page Up</span>
+					</a> <a href="../../index.html" class="nav__link"> <ion-icon
+							name="home-outline" class="nav__icon"></ion-icon> <span
+						class="nav_name">Main</span>
+					</a>
+
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- 버튼 -->
+
+	<ion-icon name="walk-outline" class="exe_seq"></ion-icon>
+	<span style="font-size: 30px; color: white; margin-right: 900px;">Body
+		Weight</span>
+	<a href="BodyWeightKO.html" style="color: white;" class="exe_seq"
+		id="menus">한국어</href> <!-- 페이지 버튼 -->
+		<div id="menuClick">
+			<hr>
+			<a href="#PU" class="button" id="menus"> <ion-icon
+					name="arrow-down-outline" class="exe_seq"></ion-icon> <span
+				class="nav_name" style="font-size: 20px; margin-right: 90px;">Push
+					Up</span>
+			</a> <a href="#DS" class="button" id="menus"> <ion-icon
+					name="arrow-down-outline" class="exe_seq"></ion-icon> <span
+				class="nav_name" style="font-size: 20px; margin-right: 90px;">Dips</span>
+			</a>
+		</div> <!-- 동영상 -->
+		<div>
+			<a name="PU"></a>
+			<hr>
+			<ion-icon name="caret-forward-outline" class="exe_seq"></ion-icon>
+			<span style="font-size: 30px; color: white;">Push Up</span> <br />
+			<div>
+				<iframe width="560" height="315"
+					src="https://www.youtube.com/embed/aoH7qNedO8k?autoplay=1&start=109&mute=1&controls=0"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+				<br />
+				<ion-icon name="remove-outline" class="exe_seq"> </ion-icon>
+				<span>Place your hands firmly on the ground, directly under
+					shoulders.</span> <br />
+				<ion-icon name="reorder-two-outline" class="exe_seq"> </ion-icon>
+				<span>Flatten your back so your entire body is straight and
+					slowly lower your body</span> <br />
+				<ion-icon name="reorder-three-outline" class="exe_seq"> </ion-icon>
+				<span>Draw shoulder blades back and down, keeping elbows
+					tucked close to your body</span> <br />
+				<ion-icon name="reorder-four-outline" class="exe_seq"> </ion-icon>
+				<span>Exhale as you push back to the starting position.</span> <br />
+			</div>
+			<div style='margin: 100px 0 100px 0;'></div>
+		</div>
+		<div>
+			<a name="DS"></a>
+			<hr>
+			<ion-icon name="caret-forward-outline" class="exe_seq"></ion-icon>
+			<span style="font-size: 30px; color: white;">Dips</span> <br />
+			<div>
+				<iframe width="560" height="315"
+					src="https://www.youtube.com/embed/pqn9koa_wrw?autoplay=1&start=65&mute=1&controls=0"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+				<br />
+				<ion-icon name="remove-outline" class="exe_seq"> </ion-icon>
+				<span>Hold your body with arms locked above the equipment</span> <br />
+				<ion-icon name="reorder-two-outline" class="exe_seq"> </ion-icon>
+				<span>Lower your body slowly while leaning forward, flare out
+					your elbows</span> <br />
+				<ion-icon name="reorder-three-outline" class="exe_seq"> </ion-icon>
+				<span>Raise your body above the bars until your arms are
+					locked.</span> <br />
+			</div>
+			<div style='margin: 100px 0 100px 0;'></div>
+			<hr>
+		</div> <!-- IONICONS --> <script
+			src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script> <!-- JS -->
+		<script src="./main.js"></script>
+</body>
+</html>
